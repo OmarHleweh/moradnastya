@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-image: url(hb.jpg);
+
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  padding-top :30%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: yellow;
+}
+h1
+{
+  color:white;
+}
+
+#message {
+  margin-top: 20px;
+  display: none;
+  font-size: 24px;
+  color: yellow;
+}
+button#noBtn {
+  position: relative;
+  transition: top 0.3s ease;
+}
+
+button#noBtn:hover {
+  animation: moveUpDown 0.5s alternate infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 60px;
+  }
+  50% {
+    top: -90px;
+  }
+  100% {
+    top: 90px;
+  }
+}
+    </style>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var noButton = document.getElementById('noBtn');
+
+  noButton.addEventListener('click', function(event) {
+    alert("al no al HA HA HA");
+    event.preventDefault(); 
+  });
+
+  document.getElementById('yesBtn').addEventListener('click', function() {
+    document.getElementById('message').innerHTML = "I love uuu moreeeeee ❤️";
+    document.getElementById('message').style.display = 'block';
+  });
+});
+    </script>
+    <title>oki</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Do you love me?</h1>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+        <div id="message"></div>
+    </div>
+    
+</body>
+</html>
